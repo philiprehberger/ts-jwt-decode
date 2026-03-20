@@ -4,11 +4,11 @@
 [![npm](https://img.shields.io/npm/v/@philiprehberger/jwt-decode-ts)](https://www.npmjs.com/package/@philiprehberger/jwt-decode-ts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-Decode and inspect JWTs — no verification, typed payload, tiny.
+Decode and inspect JWTs — no verification, typed payload, tiny
 
 > **Note:** This library does **not** verify JWT signatures. It only decodes and inspects token contents. Always verify tokens server-side before trusting their claims.
 
-## Install
+## Installation
 
 ```bash
 npm install @philiprehberger/jwt-decode-ts
@@ -72,4 +72,4 @@ npm test
 
 ## License
 
-[MIT](./LICENSE)
+MIT
