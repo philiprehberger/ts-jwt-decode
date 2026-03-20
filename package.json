@@ -1,6 +1,6 @@
 {
   "name": "@philiprehberger/jwt-decode-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Decode and inspect JWTs — no verification, typed payload, tiny",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -25,7 +25,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
-    "test": "node --test"
+    "test": "node --test",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "jwt",
