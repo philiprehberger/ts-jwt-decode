@@ -1,0 +1,58 @@
+{
+  "name": "@philiprehberger/jwt-decode-ts",
+  "version": "0.1.0",
+  "description": "Decode and inspect JWTs — no verification, typed payload, tiny",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test"
+  },
+  "keywords": [
+    "jwt",
+    "decode",
+    "token",
+    "auth",
+    "payload",
+    "expiry",
+    "base64url"
+  ],
+  "author": "Philip Rehberger",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philiprehberger/ts-jwt-decode.git"
+  },
+  "homepage": "https://github.com/philiprehberger/ts-jwt-decode#readme",
+  "bugs": {
+    "url": "https://github.com/philiprehberger/ts-jwt-decode/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
