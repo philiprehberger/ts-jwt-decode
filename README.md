@@ -1,8 +1,8 @@
 # @philiprehberger/jwt-decode-ts
 
 [![CI](https://github.com/philiprehberger/ts-jwt-decode/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-jwt-decode/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/@philiprehberger/jwt-decode-ts)](https://www.npmjs.com/package/@philiprehberger/jwt-decode-ts)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@philiprehberger/jwt-decode-ts.svg)](https://www.npmjs.com/package/@philiprehberger/jwt-decode-ts)
+[![License](https://img.shields.io/github/license/philiprehberger/ts-jwt-decode)](LICENSE)
 
 Decode and inspect JWTs — no verification, typed payload, tiny
 
