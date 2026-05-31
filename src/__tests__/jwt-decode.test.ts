@@ -100,6 +100,19 @@ describe('isExpired', () => {
     const nearFutureToken = createToken(header, { ...payload, exp: nearFutureExp });
     assert.strictEqual(isExpired(nearFutureToken, -10), true);
   });
+
+  it('should return false for a token without exp with default options', () => {
+    assert.strictEqual(isExpired(token, 0, {}), false);
+  });
+
+  it('should return true for a token without exp when requireExp is true', () => {
+    assert.strictEqual(isExpired(token, 0, { requireExp: true }), true);
+  });
+
+  it('should ignore requireExp when token has a valid exp claim', () => {
+    assert.strictEqual(isExpired(tokenWithFutureExp, 0, { requireExp: true }), false);
+    assert.strictEqual(isExpired(tokenWithPastExp, 0, { requireExp: true }), true);
+  });
 });
 
 describe('expiresIn', () => {

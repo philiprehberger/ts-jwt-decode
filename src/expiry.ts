@@ -2,11 +2,19 @@ import type { JwtPayload } from './types.js';
 import { InvalidTokenError } from './types.js';
 import { decodeJwt } from './decode.js';
 
-export function isExpired(token: string, clockTolerance: number = 0): boolean {
+export interface IsExpiredOptions {
+  requireExp?: boolean;
+}
+
+export function isExpired(
+  token: string,
+  clockTolerance: number = 0,
+  options?: IsExpiredOptions,
+): boolean {
   const { payload } = decodeJwt<JwtPayload>(token);
 
   if (typeof payload.exp !== 'number') {
-    return false;
+    return options?.requireExp === true;
   }
 
   const now = Math.floor(Date.now() / 1000);

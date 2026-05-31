@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+- `isExpired(token, tolerance, { requireExp: true })` treats tokens without an `exp` claim as expired (opt-in strict mode)
+- README: add package card image; document `base64urlDecode`; standardise Development section
+
 ## 0.1.3
 
 - Standardize README to 3-badge format with emoji Support section
